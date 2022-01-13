@@ -1,0 +1,49 @@
+.stats-card{
+    padding: 5px;
+    width: 20%;
+    height: 460px; 
+    margin-left: 400px;
+    margin-top: 50px;
+    padding: 0px 10px;
+    /* flex-flow: row wrap; */
+    /* box-sizing: border-box; */
+    /* overflow: hidden; */
+    /* display: flex; */
+    /* margin:  15px; */
+}
+
+/* #box{
+
+    display: flex;
+    margin: 0 -5px;
+    margin-left: 200px;
+} */
+
+.dior{
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+}
+
+.dear{
+    color: gray;
+}
+
+.line{
+    /* margin-top: 10px; */
+    margin-left: 20px;
+    margin-bottom: 150px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    line-height: 14px;
+    min-width: auto;
+    color: red;
+  }
+
+  /* .content{
+      padding: 16px;
+  } */

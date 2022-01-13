@@ -1,0 +1,114 @@
+<mat-card>
+
+    <mat-card-title>Thank you so much for taking the time!</mat-card-title>
+
+    <mat-card-subtitle>Please provide the below details!</mat-card-subtitle>
+
+    <mat-card-content style="padding-top: 20px;">
+
+        <form [formGroup]="addUserForm" (submit)="createUser()">
+
+            <div class="example-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name:</mat-label>
+                    <input matInput placeholder="John" formControlName="firstname">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error
+                        *ngIf="addUserForm.controls['firstname'].errors && addUserForm.controls['firstname'].hasError('required')">
+                          First Name is required
+                    </mat-error>
+                    <mat-error
+                        *ngIf="addUserForm.controls['firstname'].errors && addUserForm.controls['firstname'].hasError('minlength')">
+                          First Name should have minimum of 4 characters
+                    </mat-error>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name:</mat-label>
+                    <input matInput placeholder="Doe" formControlName="lastname">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error
+                        *ngIf="addUserForm.controls['lastname'].errors && addUserForm.controls['lastname'].hasError('required')">
+                          Last Name is required
+                    </mat-error>
+                    <mat-error
+                        *ngIf="addUserForm.controls['lastname'].errors && addUserForm.controls['lastname'].hasError('minlength')">
+                          Last Name should have minimum of 4 characters
+                    </mat-error>
+                </mat-form-field>
+
+            </div>
+
+            <p> </p>
+
+            <div class="example-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <input matInput placeholder="Enter your full Postal Address" formControlName="address">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error
+                        *ngIf="addUserForm.controls['address'].errors && addUserForm.controls['address'].hasError('required')">
+                         Address is required
+                    </mat-error>
+                    <mat-error
+                        *ngIf="addUserForm.controls['address'].errors && addUserForm.controls['address'].hasError('maxlength')">
+                        Address can have maximum of 15 characters
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Country</mat-label>
+                    <input matInput placeholder="India" formControlName="country">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error
+                        *ngIf="addUserForm.controls['country'].errors && addUserForm.controls['country'].hasError('required')">
+                        Country is required
+                    </mat-error>
+                    <mat-error
+                        *ngIf="addUserForm.controls['country'].errors && addUserForm.controls['country'].hasError('maxlength')">
+                        Country can have maximum of 10 characters
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <p> </p>
+
+            <div class="example-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email Id:</mat-label>
+                    <input matInput placeholder="example@sample.com" formControlName="email">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error
+                        *ngIf="addUserForm.controls['email'].errors && addUserForm.controls['email'].hasError('required')">
+                        Email Address is required
+                    </mat-error>
+                    <mat-error
+                        *ngIf="addUserForm.controls['email'].errors && addUserForm.controls['email'].hasError('email')">
+                        Email Address is not valid
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone Number:</mat-label>
+                    <input matInput placeholder="123456789" formControlName="phone">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error
+                        *ngIf="addUserForm.controls['phone'].errors && addUserForm.controls['phone'].hasError('required')">
+                        Phone number is required
+                    </mat-error>
+                    <mat-error
+                        *ngIf="addUserForm.controls['phone'].errors && addUserForm.controls['phone'].hasError('maxlength')">
+                        Phone number can have maximum of 20 digits
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <p> </p>
+
+            <p>
+                <button mat-raised-button color="primary" [disabled]="!addUserForm.valid">Submit Feedback</button>
+            </p>
+        </form>
+    </mat-card-content>
+</mat-card>

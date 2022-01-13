@@ -1,0 +1,61 @@
+.sidenav {
+    height: 105%;
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: gray;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+ 
+  /* .example-card {
+    max-width: 400px;
+  } */
+  
+  .example-header-image {
+    background-image: url('https://i.guim.co.uk/img/media/e48964955c4ae13e460e56a0a550097208637bbd/0_286_4365_2619/master/4365.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=782322cd3e077855b0a5cf874a79afdb');
+    background-size: cover;
+  }
+
+  .dior{
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+  }
+
+  .line{
+      margin-top: 10px;
+      margin-left: 40px;
+  }
+
+  .break{
+      margin-left: 30px;
+  }
+
+ .mat-button-toggle-group{
+     box-shadow: none;
+ } 
+  
+ .mat-button-toggle:hover{
+     border: 1px #000 solid !important;
+     background-color: lightgreen;
+     border-radius: 5px !important;
+ }
+ 
+ .mat-icon{
+     height: 48px;
+     width: 60px;
+     font-size: 48px !important;
+ }
+
+ .mat-primary{
+     color: black;
+     background-color: lightgreen;
+ }
+
+ .space{
+    margin-top: 10px;
+    margin-left: 70px;
+ }
+
