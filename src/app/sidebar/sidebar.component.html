@@ -2,7 +2,7 @@
     <mat-card>
         <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Hi Reader,</mat-card-title>
+            <mat-card-title>Hi {{ firstname }},</mat-card-title>
             <mat-card-subtitle>
                 <p class="dior">Here's your news!</p>
             </mat-card-subtitle>
@@ -46,16 +46,13 @@
                 </div>
        </mat-card>
 
-       <br><br>
-
-       <!-- <ul *ngFor = "let user of userDetails"> -->
        <ul>
-           <li>{{ userDetails.firstname }}</li>
-           <li>{{ userDetails.lastname  }}</li>
-           <li>{{ userDetails.address   }}</li>
-           <li>{{ userDetails.country   }}</li>
-           <li>{{ userDetails.email     }}</li>
-           <li>{{ userDetails.phone     }}</li>
+           <li> Firstname: {{ firstname }} </li>
+           <li> Lastname:  {{ lastname  }} </li>
+           <li> Address:   {{ address   }} </li>
+           <li> Country:   {{ country   }} </li>
+           <li> Email:     {{ email     }} </li>
+           <li> Phone:     {{ phone     }} </li>
        </ul>
       
 </div>

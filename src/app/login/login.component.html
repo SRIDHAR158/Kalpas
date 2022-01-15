@@ -1,15 +1,49 @@
-<div  class="card text-center">
+<!-- <div  class="card text-center">
     <h6 class="card-header">Kalpas Google Login</h6>
     <div class="card-block">
         <h4 class="card-title">Not Signed in!</h4>
-        <!-- <p class="card-text">Sign in with</p> -->
+        <p class="card-text">Sign in with</p>
     </div>
     <div class="card-block">
         <button class="btn btn-social-icon btn-google mx-1" (click)="signInWithGoogle()">Sign In</button>
     </div>
+</div> -->
+
+<div *ngIf="user">
+<mat-card>
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Kalpas Google Login</mat-card-title>
+        <mat-card-subtitle>
+            <p class="dior">Not Signed in!</p>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <div class="card-block">
+        <button  mat-raised-button color="primary" (click)="signInWithGoogle()">Sign In</button>
+    </div>
+</mat-card>
 </div>
 
-<div  class="card text-center">
+<br>
+
+<div *ngIf="user">
+<mat-card>
+    <div class="card text-center">
+        <h6 class="card-header">Kalpas Google Login Details</h6>
+        <div class="card-block"></div>
+        <img src="{{ user.photoUrl }}" class="card-img-top img-responsive photo">
+        <div class="card-block">
+            <h4 class="card-title">{{ user.name }}</h4>
+            <p class="card-text">{{ user.email }}</p>
+        </div>
+        <div class="card-block">
+            <button  mat-raised-button color="primary" (click)="signOut()">Sign Out</button><br><br>
+        </div>
+    </div>
+</mat-card>
+</div>
+
+<!-- <div   class="card text-center">
     <h6 class="card-header">Kalpas Google Login</h6>
     <div class="card-block"></div>
     <img src="{{ user.photoUrl }}" class="card-img-top img-responsive photo">
@@ -20,4 +54,19 @@
     <div class="card-block">
         <button class="btn btn-social-icon btn-google mx-1" (click)="signOut()">Sign Out</button>
     </div>
-</div>
+</div> -->
+
+<!-- <div class="sidenav">
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Kalpas Google Login</mat-card-title>
+            <mat-card-subtitle>
+                <p class="dior">Not Signed in!</p>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <div class="card-block">
+            <button class="btn btn-social-icon btn-google mx-1" (click)="signInWithGoogle()">Sign In</button>
+        </div>
+    </mat-card>
+</div> -->

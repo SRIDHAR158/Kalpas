@@ -17,11 +17,17 @@ export class LoginComponent implements OnInit {
     this.authService.authState.subscribe((user)=> {
      this.user = user;
     })
+
+    let storage;
+    if(localStorage.getItem('google_auth'))
+    storage = localStorage.getItem('google_auth');
   }
 
   signInWithGoogle():any{
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
+
+  
 
   signOut(): any{
      this.authService.signOut();

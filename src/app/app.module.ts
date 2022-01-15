@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -5,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { MatCardModule} from '@angular/material/card';
+import { MatCardHeader, MatCardModule, MatCardSubtitle, MatCardTitle} from '@angular/material/card';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -21,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {SocialLoginModule, GoogleLoginProvider} from 'angularx-social-login';
 // import { AuthServiceConfig } from 'angularx-social-login';
 import { SocialAuthServiceConfig } from 'angularx-social-login';
+import { RegisterComponent } from './register/register.component';
+import { FormComponent } from './form/form.component';
+import { InputComponent } from './input/input.component';
 
 
 // const config = new AuthServiceConfig([
@@ -40,6 +44,10 @@ import { SocialAuthServiceConfig } from 'angularx-social-login';
     SidebarComponent,
     MenuComponent,
     ContactComponent,
+    LoginComponent,
+    RegisterComponent,
+    FormComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +60,9 @@ import { SocialAuthServiceConfig } from 'angularx-social-login';
     FlexLayoutModule,
     MatFormFieldModule,
     MatInputModule,
+    // MatCardTitle,
+    // MatCardHeader,
+    // MatCardSubtitle,
     ReactiveFormsModule,
     MatDialogModule,
     HttpClientModule,

@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "kalpas-338109"
-  }
+    "default": "kalpas-b623a",
+    "staging": "kalpas-b623a"
+  },
+  "targets": {}
 }
